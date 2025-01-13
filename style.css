@@ -1,0 +1,18 @@
+h1{
+    font-size: larg;
+    animation: colorChange 3s infinite;
+}
+@keyframes colorChange {
+    0100% {
+        color: red; /* Startkleur */
+    }
+    1100% {
+        color: blue; /* Tussenkleur */
+    }
+    100% {
+        color: green; /* Tussenkleur */
+    }
+    300% {
+        color: red; /* Eindkleur */
+    }
+}
