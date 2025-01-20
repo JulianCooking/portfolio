@@ -1,0 +1,111 @@
+body {    
+    display: grid;
+    grid-template-columns: 20vw 15vw 15vw 15vw 15vw 15vw 5vw;
+    grid-template-rows: 8vh 15vh 15vh 15vh 15vh 15vh 17vh;
+    background: linear-gradient(to bottom, rgb(52, 52, 52), rgb(0, 0, 0));
+    margin: 0;
+}
+
+/*---------------------PROJECTS PAGINA-------------------------------------*/
+
+#projecttekst{
+    background-color: blue;
+    color: white;
+}
+
+
+#pp {
+    background-image: url('img/pp.png');
+    background-repeat: no-repeat;
+    background-size: 300px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 3;
+    position: relative;
+    top: 10px;
+    height: 150px;
+    width: 300px;
+    border-radius: 10px;
+    border: 3px solid rgb(169, 169, 169);
+    transition: 0.3s;
+}
+
+#pp:hover{
+    transform: translateY(-5px);
+}
+
+#robot {
+    background-image: url('img/robot2.jpg');
+    background-repeat: no-repeat;
+    background-size: 300px;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    position: relative;
+    top: 10px;
+    left: 100px;
+    height: 150px;
+    width: 300px;
+    border-radius: 10px;
+    border: 3px solid rgb(169, 169, 169);
+    transition: 0.3s;
+}
+
+#robot:hover{
+    transform: translateY(-10px);
+}
+
+#sport {
+    background-image: url('img/uxd.jpg');
+    background-repeat: no-repeat;
+    background-size: 380px;
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+    position: relative;
+    top: 10px;
+    left: 200px;
+    height: 150px;
+    width: 300px;
+    border-radius: 10px;
+    border: 3px solid rgb(169, 169, 169);
+    transition: 0.3s;
+}
+
+#sport:hover{
+    transform: translateY(-10px);
+}
+#film {
+    background-image: url('img/video.png');
+    background-repeat: no-repeat;
+    background-size: 280px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 3;
+    position: relative;
+    top: 200px;
+    left: 0px;
+    height: 150px;
+    width: 300px;
+    border-radius: 10px;
+    border: 3px solid rgb(169, 169, 169);
+    transition: 0.3s;
+}
+
+#film:hover{
+    transform: translateY(-10px);
+}
+
+
+
+/*------------------------- PERFECT PITCH---------------------*/
+
+
+#PP2 {
+    background-image: url('img/pp.png');
+    background-repeat: no-repeat;
+    background-size: 400px;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    position: relative;
+    top: 10px;
+    height: 700px;
+    width: 400px;
+    border-radius: 10px;
+}
