@@ -1,8 +1,8 @@
 body {    
     display: grid;
     grid-template-columns: 20vw 20vw 20vw 10vw 15vw 15vw;
-    grid-template-rows: 8vh 20vh 20vh 20vh 20vh auto;
-    background-color: rgb(0, 0, 0);
+    grid-template-rows: 8vh 20vh 20vh 20vh 20vh 10vh;
+    background: linear-gradient(to bottom, rgb(52, 52, 52), rgb(0, 0, 0));
     margin: 0;
 }
 
@@ -30,8 +30,12 @@ body {
     top: -70px;
     left: 200px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.3s;
 }
 
+#projects:hover {
+    transform: translateY(-5px);
+}
 #about{
     grid-column: 3 / 3;
     grid-row: 5 / 5;
@@ -43,6 +47,11 @@ body {
     top: -70px;
     left: 300px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.3s;
+}
+
+#about:hover {
+    transform: translateY(-5px);
 }
 
 /* #achtergrond{
@@ -55,10 +64,3 @@ body {
 } */
 
 
-
-/*---------------------PROJECTS PAGINA-------------------------------------*/
-
-#projecttekst{
-    background-color: blue;
-    color: white;
-}
