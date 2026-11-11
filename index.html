@@ -1,95 +1,359 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Julian</title>
+
+    <meta name="description" content="Het portfolio van Julian van Stralen, CMD-student. Bekijk mijn projecten op het gebied van film, interactie en multimedia.">
+
+    <title>Julian van Stralen | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Header -->
-<header class="header">
-    <div class="header-text">
-        <h1>Julian van Stralen</h1>
-        <p>Communication & MultiMedia Design • Student • Portfolio</p>
-    </div>
+    <!-- Navigatie -->
+    <nav class="navbar">
+        <a href="#" class="logo">J<span>.</span></a>
 
-    <div class="header-image">
-        <img src="img/Picture1.jpg" alt="Foto van Julian">
-    </div>
-</header>
+        <div class="nav-links">
+            <a href="#over-mij">Over mij</a>
+            <a href="#projecten">Projecten</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
 
-    <!-- About -->
-    <section class="section">
-        <h2>Over mij</h2>
-        <p>
-            Welkom! Ik ben Julian, 19 jaar, en zit in mijn derde jaar van de opleiding
-            Communication & MultiMedia Design. Dit portfolio laat mijn projecten
-            en ontwikkeling zien.
-        </p>
-    </section>
+    <!-- Hero / Header -->
+    <header class="hero">
 
-    <!-- Projects -->
-    <section class="section projects">
-        <h2>Projecten</h2>
+        <div class="hero-content">
 
-        <!-- Project 1 -->
-        <div class="project">
-            <h3>Time Based Storytelling</h3>
+            <span class="eyebrow">
+                PORTFOLIO · COMMUNICATION & MULTIMEDIA DESIGN
+            </span>
 
-            <!-- Video 1 -->
-            <div class="video-block">
-                <video controls>
-                    <source src="img/filmnamaak.mp4" type="video/mp4">
-                    Je browser ondersteunt deze video niet.
-                </video>
-                <p class="video-text">
-                    Voor de filmmodule moesten wij een opdracht doen waarin wij een beroemde scene moesten namaken binnen 1 minuut. Wij hebben voor de scene gekozen uit de film "Pulp Fiction". In ons groepje moesten we taken verdelen waaronder camera, licht, edit en audio. Ik had licht en edit deels overgenomen.
+            <h1>
+                Julian van<br>
+                <span>Stralen.</span>
+            </h1>
 
-                </p>
-            </div>
+            <p class="hero-description">
+                Creatief, nieuwsgierig en altijd bezig met nieuwe ideeën.
+                Ik ben CMD-student met een passie voor digitale media,
+                storytelling en het creëren van bijzondere ervaringen.
+            </p>
 
-            <!-- Video 2 -->
-            <div class="video-block">
-                <video controls>
-                    <source src="img/eindfilm.mp4" type="video/mp4">
-                    Je browser ondersteunt deze video niet.
-                </video>
-                <p class="video-text">
-                    Voor de eindopdracht moesten we een filmpje maken van één minuut waarin we een kort en sterk verhaal moesten laten vertellen. Na veel gebrainstormd te hebben kwamen we uit op een 35 jarige man die somber in het leven staat. Hij werkt fulltime en zoekt een beetje vreugde in zijn leven. Zal hij die vreugde weer vinden?
-                    Mijn taken in het groepje waren voornamelijk het editten en het licht.
-                </p>
+            <a href="#projecten" class="primary-button">
+                Bekijk mijn werk <span>↓</span>
+            </a>
+
+        </div>
+
+        <div class="hero-image-wrapper">
+            <div class="image-background"></div>
+
+            <img
+                src="img/Picture1.jpg"
+                alt="Portret van Julian van Stralen"
+                class="hero-image"
+            >
+
+            <div class="image-label">
+                <span class="status-dot"></span>
+                CMD STUDENT
             </div>
         </div>
 
-<!-- Project 2 -->
-<div class="project">
-    <h3>Intergrated Smart System</h3>
+        <div class="hero-number">01 / 03</div>
 
-    <div class="video-block">
-        <video controls>
-            <source src="img/boekenkast.mp4" type="video/mp4">
-            Je browser ondersteunt deze video niet.
-        </video>
-        <p class="video-text">
-            In deze module was de opdracht om een smart system te maken. In het groepje hebben we een slimme boekenkast gemaakt waarin je onder andere kan zien welk boek je wel of niet hebt gelezen. Als je een boek pakt zie je op de app wat voor boek het is en de samenvatting daarvan. Daarnaast heb je ook lampjes boven de boeken staan. Groen betekend dat je het boek al hebt gelezen en wit betekend dat je het boek nog niet hebt gelezen. In dit project heb ik vooral geëxperimenteerd hoe je het beste op zo'n manier een boekenkast kan maken en heb ik geholpen met het maken ervan.
+    </header>
+
+
+    <!-- Over mij -->
+    <section class="about section" id="over-mij">
+
+        <div class="section-heading">
+            <span class="section-label">01 — OVER MIJ</span>
+            <h2>Wie ben ik<span>?</span></h2>
+        </div>
+
+        <div class="about-content">
+
+            <p class="about-intro">
+                Ik ben Julian, derdejaars student Communication &
+                Multimedia Design. Ik houd ervan om creatieve ideeën
+                om te zetten naar concrete concepten en digitale ervaringen.
+            </p>
+
+            <p class="about-text">
+                Tijdens mijn opleiding heb ik gewerkt aan uiteenlopende
+                projecten op het gebied van film, interactie, technologie
+                en storytelling. Hierbij vind ik het interessant om
+                verschillende disciplines te combineren en nieuwe
+                technieken te ontdekken.
+
+                <br><br>
+
+                In mijn projecten werk ik graag praktisch en experimenteel.
+                Door ideeën uit te proberen, samen te werken en kritisch
+                naar het resultaat te kijken, blijf ik mezelf ontwikkelen
+                als ontwerper.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projecten -->
+    <section class="projects section" id="projecten">
+
+        <div class="section-heading">
+            <span class="section-label">02 — MIJN WERK</span>
+            <h2>Geselecteerde <span>projecten.</span></h2>
+            <p class="section-intro">
+                Een selectie van projecten waarin ik mijn creativiteit,
+                technische vaardigheden en ontwikkeling laat zien.
+            </p>
+        </div>
+
+
+        <!-- PROJECT 1 -->
+        <article class="project">
+
+            <div class="project-top">
+                <span class="project-number">01</span>
+                <span class="project-category">FILM · STORYTELLING</span>
+            </div>
+
+            <h3>Time Based Storytelling</h3>
+
+            <p class="project-intro">
+                Verhalen vertellen met beeld, licht en montage.
+            </p>
+
+
+            <!-- Video 1 -->
+            <div class="video-block">
+
+                <video controls preload="metadata">
+                    <source src="img/filmnamaak.mp4" type="video/mp4">
+                    Je browser ondersteunt deze video niet.
+                </video>
+
+                <div class="video-caption">
+                    <div>
+                        <h4>Scene Recreation — Pulp Fiction</h4>
+                        <span class="video-tag">FILMRECREATIE</span>
+                    </div>
+                </div>
+
+                <p class="video-text">
+                    Voor deze productie hebben we een iconische scène uit
+                    de film Pulp Fiction opnieuw vormgegeven in een korte
+                    film van maximaal één minuut. Hierbij stond het zo
+                    nauwkeurig mogelijk nabootsen van de originele scène
+                    centraal.
+
+                    Binnen het team werden de verschillende productietaken
+                    verdeeld, waaronder camera, licht, audio en montage.
+                    Mijn bijdrage lag voornamelijk bij de belichting en
+                    een deel van de montage. Ik heb hierbij gewerkt aan
+                    de visuele sfeer van de scène en de uiteindelijke
+                    afwerking van de video.
+                </p>
+
+            </div>
+
+
+            <!-- Video 2 -->
+            <div class="video-block">
+
+                <video controls preload="metadata">
+                    <source src="img/eindfilm.mp4" type="video/mp4">
+                    Je browser ondersteunt deze video niet.
+                </video>
+
+                <div class="video-caption">
+                    <div>
+                        <h4>Short Film — Finding Happiness</h4>
+                        <span class="video-tag">KORTE FILM</span>
+                    </div>
+                </div>
+
+                <p class="video-text">
+                    Voor deze eindproductie ontwikkelden we een kort
+                    filmverhaal waarin emotie en storytelling centraal
+                    staan. Het verhaal volgt een 35-jarige man die
+                    vastzit in de dagelijkse sleur van zijn fulltime
+                    baan. Hij mist plezier in zijn leven en gaat op
+                    zoek naar een manier om dat gevoel terug te vinden.
+
+                    Door middel van beeld, sfeer en montage hebben we
+                    geprobeerd zijn emotionele ontwikkeling zichtbaar
+                    te maken. Mijn belangrijkste verantwoordelijkheden
+                    binnen deze productie waren de montage en belichting.
+                    Ik heb hiermee bijgedragen aan het tempo, de sfeer
+                    en de visuele samenhang van de film.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 2 -->
+        <article class="project">
+
+            <div class="project-top">
+                <span class="project-number">02</span>
+                <span class="project-category">TECHNOLOGIE · INTERACTIE</span>
+            </div>
+
+            <h3>Integrated Smart System</h3>
+
+            <p class="project-intro">
+                Technologie en gebruiksgemak gecombineerd in een slimme boekenkast.
+            </p>
+
+            <div class="video-block">
+
+                <video controls preload="metadata">
+                    <source src="img/boekenkast.mp4" type="video/mp4">
+                    Je browser ondersteunt deze video niet.
+                </video>
+
+                <div class="video-caption">
+                    <div>
+                        <h4>Smart Bookshelf</h4>
+                        <span class="video-tag">INTERACTIEF SYSTEEM</span>
+                    </div>
+                </div>
+
+                <p class="video-text">
+                    Voor dit project hebben we een slimme boekenkast
+                    ontwikkeld die fysieke boeken combineert met een
+                    digitale applicatie.
+
+                    Het systeem maakt inzichtelijk welke boeken de
+                    gebruiker al heeft gelezen en welke nog op de
+                    leeslijst staan. Wanneer een boek wordt gepakt,
+                    kan de gebruiker via de gekoppelde app informatie
+                    over het boek bekijken, waaronder een samenvatting.
+
+                    Ook hebben we een visueel feedbacksysteem toegevoegd
+                    met lampjes boven de boeken. Groen geeft aan dat een
+                    boek al gelezen is, terwijl wit aangeeft dat het boek
+                    nog gelezen kan worden.
+
+                    Mijn bijdrage lag voornamelijk bij het experimenteren
+                    met de technische en fysieke uitwerking van de
+                    boekenkast. Daarnaast heb ik meegewerkt aan de
+                    realisatie van het prototype en onderzocht hoe de
+                    verschillende onderdelen goed konden samenwerken.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+        <article class="project">
+
+            <div class="project-top">
+                <span class="project-number">03</span>
+                <span class="project-category">IMMERSIVE · INTERACTIE</span>
+            </div>
+
+            <h3>Immersive Storytelling</h3>
+
+            <p class="project-intro">
+                Een interactieve escaperoom waarin de gebruiker zelf het verhaal ontdekt.
+            </p>
+
+            <div class="video-block">
+
+                <video controls preload="metadata">
+                    <source src="img/escape.mov" type="video/quicktime">
+                    Je browser ondersteunt deze video niet.
+                </video>
+
+                <div class="video-caption">
+                    <div>
+                        <h4>Escape Room — The Electric Room</h4>
+                        <span class="video-tag">INTERACTIEVE ERVARING</span>
+                    </div>
+                </div>
+
+                <p class="video-text">
+                    Binnen deze module heb ik een interactieve escaperoom
+                    ontwikkeld vanuit het thema van een oude
+                    elektriciteitskamer. De gebruiker bevindt zich in
+                    een ruimte waarin elektriciteit een belangrijke rol
+                    speelt bij het oplossen van de puzzels.
+
+                    Een belangrijk onderdeel van het concept is een
+                    elektrische deur die pas opent wanneer er voldoende
+                    stroom beschikbaar is. Hierdoor wordt de gebruiker
+                    uitgedaagd om de omgeving te onderzoeken en
+                    oplossingen te ontdekken.
+
+                    Het project was voor mij een kans om zonder eerdere
+                    ervaring met deze vorm van ontwikkeling aan de slag
+                    te gaan. Door te experimenteren en de verschillende
+                    interactieve onderdelen zelf op te bouwen, heb ik
+                    ervaring opgedaan met het ontwikkelen van een
+                    interactieve omgeving en het vertalen van een idee
+                    naar een speelbare ervaring.
+                </p>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+
+        <span class="section-label">03 — CONTACT</span>
+
+        <h2>
+            Samen iets<br>
+            <span>moois maken?</span>
+        </h2>
+
+        <p>
+            Heb je een vraag, een interessant idee of wil je meer weten
+            over mijn werk? Neem gerust contact met me op.
         </p>
-    </div>
 
-<!-- Project 3 -->
-<div class="project">
-    <h3>Immersive Storytelling</h3>
+        <a href="mailto:contact@julianvs.nl" class="primary-button">
+            Stuur mij een e-mail <span>↗</span>
+        </a>
 
-    <div class="video-block">
-        <video controls>
-            <source src="img/escape.mov" type="video/mp4">
-            Je browser ondersteunt deze video niet.
-        </video>
-        <p class="video-text">
-            Voor deze module moesten wij onder andere een escaperoom maken van scretch zonder ervaring. We kregen begeleiding met lessen en door het gewoon te doen. Hieruit heb ik een oude elektriciteitskamer gemaakt met een elektrische deur die pas opengaat als er genoeg stroom is.
-        </p>
-    </div>
+    </section>
 
 
+    <!-- Footer -->
+    <footer class="footer">
+
+        <a href="#" class="logo">J<span>.</span></a>
+
+        <p>© 2026 Julian van Stralen · Portfolio</p>
+
+        <a href="#top">Terug naar boven ↑</a>
+
+    </footer>
+
+</body>
+</html>
