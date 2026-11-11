@@ -1,114 +1,584 @@
+
+/* =========================================
+   JULIAN VAN STRALEN — PORTFOLIO
+   ========================================= */
+
+/* RESET */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-/* Algemene stijl */
+:root {
+    --background: #101311;
+    --surface: #191e1b;
+    --surface-light: #222923;
+    --accent: #b7f36b;
+    --text: #f1f3ee;
+    --muted: #a0aaa1;
+    --border: rgba(255, 255, 255, 0.10);
+}
+
 body {
-    font-family: monospace;
-    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
-    color: #e0f2f1;
-    line-height: 1.6;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
 }
 
-/* ================= HEADER ================= */
-.header {
-    min-height: 100vh;
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.navbar {
+    width: 100%;
+    padding: 25px 8%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 60px;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 10;
+    background: var(--background);
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
     gap: 40px;
 }
 
-.header-text {
+.nav-links a {
+    font-size: 14px;
+    color: var(--muted);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================
+   HERO / HEADER
+   ========================================= */
+
+.hero {
+    min-height: 690px;
+    padding: 100px 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 650px;
+    z-index: 2;
+}
+
+.eyebrow,
+.section-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--accent);
+}
+
+.hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(60px, 8vw, 105px);
+    line-height: 0.98;
+    letter-spacing: -5px;
+    margin: 30px 0;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero-description {
+    max-width: 510px;
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--muted);
+    margin-bottom: 35px;
+}
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    padding: 16px 23px;
+    background: var(--accent);
+    color: #101311;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+    background: #d0ff94;
+    transform: translateY(-4px);
+}
+
+.primary-button span {
+    font-size: 20px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 320px;
+    min-width: 260px;
+    margin-right: 20px;
+}
+
+.image-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 5px;
+    top: 18px;
+    left: 18px;
+    opacity: 0.8;
+}
+
+.hero-image {
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.image-label {
+    position: absolute;
+    bottom: -20px;
+    left: -35px;
+    z-index: 2;
+    background: var(--surface-light);
+    padding: 13px 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: 1px solid var(--border);
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+.hero-number {
+    position: absolute;
+    bottom: 35px;
+    right: 8%;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
+
+.section {
+    padding: 110px 12%;
+    border-top: 1px solid var(--border);
+}
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.section-heading h2,
+.contact h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(38px, 5vw, 58px);
+    letter-spacing: -2px;
+    line-height: 1.15;
+    margin-top: 15px;
+}
+
+.section-heading h2 span,
+.contact h2 span {
+    color: var(--accent);
+}
+
+.section-intro {
+    margin-top: 20px;
+    color: var(--muted);
     max-width: 600px;
 }
 
-.header h1 {
-    font-size: 48px;
-    color: #5eead4;
+
+/* =========================================
+   ABOUT
+   ========================================= */
+
+.about {
+    background: #151a16;
 }
 
-.header p {
-    font-size: 20px;
-    margin-top: 10px;
-    color: #b2dfdb;
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
 }
 
-/* Header afbeelding */
-.header-image img {
-    width: 230px;
-    height: auto;
-    border-radius: 12px;
-    border: 3px solid #5eead4;
-    right: 1000px;
+.about-intro {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--text);
 }
 
-/* ================= SECTIONS ================= */
-.section {
-    padding: 80px 60px;
-    max-width: 900px;
+.about-text {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 2;
 }
 
-.section h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    color: #5eead4;
-}
 
-.section p {
-    font-size: 18px;
-}
+/* =========================================
+   PROJECTS
+   ========================================= */
 
-/* ================= PROJECTS ================= */
 .projects {
-    padding-bottom: 120px;
+    padding-bottom: 80px;
 }
 
 .project {
-    background: rgba(94, 234, 212, 0.08);
-    border-left: 4px solid #5eead4;
-    padding: 30px;
-    margin-bottom: 50px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 45px;
+    margin-bottom: 55px;
+    transition: border-color 0.3s ease;
+}
+
+.project:hover {
+    border-color: rgba(183, 243, 107, 0.5);
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.project-category {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-align: right;
 }
 
 .project h3 {
-    font-size: 24px;
-    margin-bottom: 25px;
-    color: #99f6e4;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(27px, 4vw, 39px);
+    letter-spacing: -1px;
+    margin-top: 30px;
 }
 
-/* ================= VIDEO'S ================= */
-.video-block {
+.project-intro {
+    color: var(--accent);
+    font-size: 15px;
+    margin-top: 8px;
     margin-bottom: 35px;
+}
+
+
+/* =========================================
+   VIDEO BLOCKS
+   ========================================= */
+
+.video-block {
+    margin-top: 40px;
+    padding-top: 35px;
+    border-top: 1px solid var(--border);
 }
 
 .video-block video {
     width: 100%;
-    max-width: 800px;
-    border-radius: 6px;
-    margin-bottom: 10px;
+    max-height: 550px;
+    background: #080a08;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.video-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.video-caption h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.video-tag {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--accent);
 }
 
 .video-text {
-    font-size: 16px;
-    color: #cfeeed;
+    max-width: 850px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
+
+/* =========================================
+   CONTACT
+   ========================================= */
+
+.contact {
+    background: var(--surface);
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.contact h2 {
+    margin: 25px 0;
+}
+
+.contact p {
+    max-width: 500px;
+    margin: 0 auto 35px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 8%;
+    border-top: 1px solid var(--border);
+    gap: 20px;
+}
+
+.footer p,
+.footer > a:last-child {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.footer > a:last-child:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 90px 8%;
+        gap: 50px;
     }
 
-    .header-image img {
-        width: 220px;
+    .hero-image-wrapper {
+        width: 270px;
+        min-width: 220px;
+    }
+
+    .hero-image {
+        height: 350px;
     }
 
     .section {
-        padding: 60px 30px;
+        padding: 90px 8%;
     }
+
+    .about-content {
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 20px 6%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 29px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 75px 8% 100px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 65px;
+    }
+
+    .hero h1 {
+        font-size: 66px;
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-image-wrapper {
+        width: 75%;
+        max-width: 300px;
+        min-width: 0;
+        align-self: center;
+        margin-right: 15px;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .hero-number {
+        bottom: 25px;
+        right: 8%;
+    }
+
+    .section {
+        padding: 75px 7%;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about-intro {
+        font-size: 22px;
+    }
+
+    .project {
+        padding: 23px;
+        margin-bottom: 35px;
+    }
+
+    .project-top {
+        gap: 15px;
+    }
+
+    .project-category {
+        font-size: 9px;
+    }
+
+    .project h3 {
+        font-size: 27px;
+    }
+
+    .video-block {
+        margin-top: 30px;
+        padding-top: 25px;
+    }
+
+    .video-caption h4 {
+        font-size: 16px;
+    }
+
+    .video-text {
+        font-size: 13px;
+    }
+
+    .contact {
+        padding: 90px 7%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 7%;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+
 }
